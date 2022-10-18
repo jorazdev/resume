@@ -1,0 +1,21 @@
+https://resume.com {
+	# Set this path to your site's directory:
+	root * /srv/public
+
+	tls /etc/cert/resume/resume.com+4.pem /etc/cert/resume/resume.com+4-key.pem
+
+	# Enable Gzip compression:
+	encode gzip
+
+	# Serve PHP files through php-fpm:
+	#php_fastcgi unix//run/php/php7.4-fpm.sock
+	php_fastcgi php-fpm:9000
+
+	# Enable the static file resume:
+	file_server
+
+	# Enable HTTP request logging
+	log {
+		output file /var/log/caddy/access.log
+	}
+}

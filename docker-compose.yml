@@ -1,0 +1,83 @@
+version: '3.8'
+
+services:
+  caddy:
+    image: caddy:latest
+    container_name: caddy_resume
+    restart: unless-stopped
+    ports:
+      - "443:443"
+    volumes:
+      - ./docker/caddy/resume.com+4.pem:/etc/cert/resume/resume.com+4.pem
+      - ./docker/caddy/resume.com+4-key.pem:/etc/cert/resume/resume.com+4-key.pem
+      - ./docker/caddy/Caddyfile:/etc/caddy/Caddyfile
+      - .:/srv
+      - caddy_data:/data
+      - caddy_config:/config
+
+  php-fpm:
+    build:
+      context: ./docker/php
+      args:
+        TIMEZONE: Europe/Madrid
+    container_name: php_resume
+    ports:
+      - "9000:9000"
+    volumes:
+      - .:/srv
+      - ./docker/php/custom.ini:/usr/local/etc/php/conf.d/custom.ini
+
+  database:
+    container_name: mysql_resume
+    image: mysql:8
+    ports:
+      - "3307:3306"
+    volumes:
+      - ./docker/mysql:/var/lib/mysql
+    env_file:
+      - ./docker/env/mysql.env
+
+  phpmyadmin:
+    container_name: phpmyadmin_resume
+    image: phpmyadmin/phpmyadmin
+    environment:
+      MYSQL_USERNAME: resume
+      MYSQL_ROOT_PASSWORD: 123
+      PMA_ARBITRARY: 1
+      PMA_HOST: database
+    ports:
+      - "88:80"
+    links:
+      - database
+
+  node:
+    build:
+      context: ./docker/node
+    container_name: node_resume
+    volumes:
+      - .:/srv
+    command: bash -c "yarn && yarn watch"
+
+####> doctrine/doctrine-bundle ###
+#  database:
+#    image: postgres:${POSTGRES_VERSION:-14}-alpine
+#    environment:
+#      POSTGRES_DB: ${POSTGRES_DB:-app}
+#      # You should definitely change the password in production
+#      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-!ChangeMe!}
+#      POSTGRES_USER: ${POSTGRES_USER:-app}
+#    volumes:
+#      - db-data:/var/lib/postgresql/data:rw
+#      # You may use a bind-mounted host directory instead, so that it is harder to accidentally remove the volume and lose all your data!
+#      # - ./docker/db/data:/var/lib/postgresql/data:rw
+####< doctrine/doctrine-bundle ###
+
+volumes:
+  caddy_data:
+  caddy_config:
+
+
+
+  ###> doctrine/doctrine-bundle ###
+  #db-data:
+###< doctrine/doctrine-bundle ###

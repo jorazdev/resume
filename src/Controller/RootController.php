@@ -15,10 +15,7 @@ class RootController extends AbstractController
 
 	}
 
-	/**
-	 * @Route("/{vueRouting}", requirements={"vueRouting"="^(?!api|_(profiler|wdt)).*"}, name="vue_routing")
-	 * @return Response
-	 */
+    #[Route('/{vueRouting}', name: 'vue_routing', requirements: ['vueRouting' => '^(?!api|_(profiler|wdt)).*'])]
 	public function index(): Response
 	{
         $request = $this->requestStack->getCurrentRequest();

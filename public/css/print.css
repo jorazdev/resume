@@ -1,0 +1,93 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background: lightblue;
+}
+
+.page {
+  width: 100%;
+  height: auto;
+  /*display: -webkit-box; !* wkhtmltopdf uses this one *!*/
+  /*display: flex;*/
+  /*-webkit-box-pack: center; !* wkhtmltopdf uses this one *!*/
+  /*justify-content: space-between;*/
+}
+
+.flex-space-between {
+  display: -webkit-box;
+  display: flex;
+  /*justify-content: space-between;*/
+  -webkit-box-pack: justify;
+  width: 100%;
+  height: 6rem;
+  border: solid 5px #EE82EE;
+  border-radius: 1em;
+  margin-bottom: 2em;
+}
+
+.flex-start {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-pack: start;
+  justify-content: start;
+  height: 6rem;
+  border: solid 5px #EE82EE;
+  border-radius: 1em;
+  margin-bottom: 2em;
+}
+
+.flex-end {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-pack: end;
+  justify-content: end;
+  height: 6rem;
+  border: solid 5px #EE82EE;
+  border-radius: 1em;
+  margin-bottom: 2em;
+}
+
+.flex-center {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-pack: center;
+  justify-content: center;
+  height: 6rem;
+  border: solid 5px #EE82EE;
+  border-radius: 1em;
+  margin-bottom: 2em;
+}
+
+.flex-parent {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-pack: justify;
+  width: 100%;
+  height: 6rem;
+  border: solid 5px #EE82EE;
+  border-radius: 1em;
+  margin-bottom: 2em;
+}
+
+.flex-parent .flex-left, .flex-parent .flex-right {
+  width: auto;
+  height: 100%;
+  background-color:  #EE82EE;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-pack: start;
+}
+
+.flex-item {
+  width: 6rem;
+  height: 100%;
+  padding: 20px;
+  margin-right: 5px;
+  background-color:  #ed6a5a;
+}

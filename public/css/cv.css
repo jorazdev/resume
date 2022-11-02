@@ -1,0 +1,248 @@
+/*@import url('https://fonts.googleapis.com/css2?family=Island+Moments&display=swap');*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;1,100;1,200;1,300&display=swap');
+/*@import "../../assets/font/css/font-awesome.min.css";*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+.page {
+    background: #f8f9fa;
+    margin: 2em auto;
+    box-shadow: 0 0 0.5cm rgba(0, 0, 0, 0.5);
+    width: 60%;
+    height: auto;
+    padding: 10px 5px 5px 5px;
+    overflow: hidden;
+    /*position: relative;*/
+}
+
+.page .panels {
+    position: fixed;
+    left: 15%;
+    padding: 3px;
+    box-shadow: 0 0 0.5cm rgba(0, 0, 0, 0.5);
+}
+
+.page .panels .panel{
+    width: 50px;
+    height: 50px;
+    background-color: #00bb00;
+    border: 1px solid #FFFFFF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.page .panels .panel i{
+    font-size: 25px;
+    color: #FFFFFF;
+}
+
+
+section.header {
+    width: 100%;
+    height: 150px;
+    background-image: url('../img/bg.jpg');
+    background-position: center;
+    margin-bottom: 1em;
+    display: flex;
+    justify-content: space-between;
+    display: -webkit-box;
+    -webkit-box-pack: justify;
+    box-shadow: 0 0 0.5cm rgba(0, 0, 0, 0.5);
+}
+
+.left-header, .right-header {
+    height: 100%;
+}
+
+.left-header {
+    width: 30%;
+    position: relative;
+}
+
+.right-header {
+    width: 70%;
+}
+
+.left-header .photo img{
+    position: absolute;
+    left: 15px;
+    top: 50px;
+    width: 150px;
+    height: 150px;
+    border-radius: 100%;
+    border: 3px solid #00bb00;
+    padding: 3px;
+}
+
+section.information {
+    margin-top: 4em;
+    padding: 10px;
+}
+
+section.information .name{
+    font-size: 27px;
+}
+
+section.information .techno{
+    font-size: 15px;
+    margin-top: -5px;
+    font-style: italic;
+    font-weight: bold;
+}
+
+section.contacts {
+    padding-left: 10px;
+}
+
+section.contacts .contact{
+    font-size: 11px;
+}
+
+.page section.main {
+    height: auto;
+    /*height: 900px;*/
+    margin-top: 1em;
+    display: flex;
+    justify-content: space-between;
+    display: -webkit-box;
+    -webkit-box-pack: justify;
+}
+
+.page section.main .main-left {
+    width: 25%;
+    height: auto;
+    background: #FFFFFF; /*#84C547*/
+    /*box-shadow: 0 0 0.5cm rgba(0, 0, 0, 0.5);*/
+}
+
+.page section.main .main-right {
+    width: 73.5%;
+    height: auto;
+    margin-left: 7px;
+    background: #FFFFFF;
+    /*box-shadow: 0 0 0.5cm rgba(0, 0, 0, 0.5);*/
+}
+
+.main-left .formation {
+    height: auto;
+}
+
+.main-left .formation .formation-title{
+    background-color: #84C547;
+    padding: 7px 3px 3px 3px;
+    font-size: 20px;
+}
+
+.main-left .formation .events {
+    padding: 5px;
+}
+
+.main-left .formation .events .event {
+    /*font-size: 20px;*/
+    margin-bottom: 6px;
+    margin-top: 6px;
+}
+
+.main-left .event .date{
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 2px;
+}
+
+.main-left .event .title{
+    font-size: 15px;
+    color: #000000;
+}
+
+.main-right .title {
+    width: 99%;
+    padding: 7px 3px 3px 3px;
+    background-color: #84C547;
+    font-size: 20px;
+}
+
+.experiences {
+    padding-left: 5px;
+    padding-top: 10px;
+}
+.main-right .experiences .experience {
+    width: 97%;
+}
+
+.experiences .clear {
+    margin-bottom: 1em;
+    height: 5px;
+}
+
+.experiences .experience .left-exp{
+    width: 7%;
+    height: auto;
+    float: left;
+}
+
+.experiences .experience .right-exp{
+    width: 91.5%;
+    height: auto;
+    float: left;
+    padding-left: 5px;
+}
+
+.left-exp img {
+    width: 40px;
+    height: 40px;
+}
+
+.right-exp .job {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.right-exp .type-company {
+    font-style: italic ;
+    font-size: 12px;
+}
+
+
+.right-exp .date-place {
+    color: #6c757d;
+    font-size: 10px;
+    font-style: italic ;
+}
+
+.right-exp .descriptions{
+    margin-top: 5px;
+    margin-bottom: 5px;
+    font-size: 11px;
+}
+
+.right-exp .descriptions .title-description{
+    font-size: 14px;
+    padding: 2px;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #212529;
+}
+.right-exp .descriptions .item{
+    padding: 2px;
+    font-size: 15px;
+}
+
+.right-exp .descriptions .item i{
+    font-size: 7px;
+}
+
+.right-exp .technologies {
+    font-size: 15px;
+    font-weight: bold;
+    font-style: italic;
+    padding: 3px;
+    margin-bottom: 1em;
+    background-color: #84C547;
+}

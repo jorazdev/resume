@@ -6,6 +6,7 @@ import store from './store'
 import ElementPlus from 'element-plus'
 import 'element-plus/dist/index.css'
 import './plugins/css'
+import '../../assets/font/css/font-awesome.min.css'
 
 createApp(App)
     .use(store)

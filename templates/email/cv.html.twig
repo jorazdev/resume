@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="{{ fontAwesome }}">
+    <link rel="stylesheet" href="{{ font }}">
+    <link rel="stylesheet" type="text/css" href="{{ cv }}" />
+{#    <link rel="stylesheet"#}
+{#          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"#}
+{#          integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg=="#}
+{#          crossorigin="anonymous"#}
+{#          referrerpolicy="no-referrer" />#}
+
+</head>
+<body>
+    <div class="page">
+        <section class="header">
+            <div class="left-header">
+                <div class="photo">
+                    <img src="{{ header.photo }}" alt="Jocelyn RAZAFIMHARO" />
+                </div>
+            </div>
+            <div class="right-header"></div>
+        </section>
+
+        <section class="profile">
+            <section class="information">
+                <div class="name">{{ header.name }} {{ header.lastName }}</div>
+                <div class="techno">{{ header.rule }} {{ header.techno }}</div>
+            </section>
+            <section class="contacts">
+                {% for item in header.infos %}
+                    <div class="contact">
+                        <i class="{{ item.icon }}"></i> :
+                        <span>{{ item.info }}</span>
+                    </div>
+                {% endfor %}
+            </section>
+        </section>
+
+        <section class="main">
+            <div class="main-left">
+                {% for formation in formations %}
+                    <div class="formation">
+                        <div class="formation-title">
+                            <i class="fa fa-graduation-cap"></i>
+                            {{ formation.label }}
+                        </div>
+                        <div class="events">
+                            {% for event in formation.events %}
+                                <div class="event">
+                                    <div class="date">{{ event.group }}</div>
+                                    <div class="title">{{ event.title }}</div>
+                                </div>
+                            {% endfor %}
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+            <div class="main-right">
+                <div class="title">
+                    <i class="fa fa-graduation-cap"></i>
+                    EXPÉRIENCES PROFESSIONNELLES
+                </div>
+                <div class="experiences">
+                    {% for experience in experiences %}
+                        <div class="experience">
+                            <div class="left-exp">
+                                <img src="{{ experience.image }}">
+                            </div>
+                            <div class="right-exp">
+                                <div class="job">
+                                    {{ experience.job }}
+                                </div>
+                                <div class="type-company">
+                                    <span class="company">{{ experience.company }}</span> .
+                                    <span class="type">{{ experience.type }}</span>
+                                </div>
+                                <div class="date-place">
+                                    {{ experience.date }} <br>
+                                    {{ experience.place }}
+                                </div>
+                                <div class="descriptions">
+                                    <div class="title-description">{{ experience.title }}</div>
+                                    {% for item in experience.descriptions %}
+                                        <div class="item">
+                                            <i class="fa fa-cubes"></i>
+                                            {{ item }}
+                                        </div>
+                                    {% endfor %}
+                                </div>
+                                <div class="technologies">{{ experience.technologies }}</div>
+                            </div>
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </section>
+    </div>
+</body>
+</html>

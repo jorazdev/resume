@@ -1,0 +1,213 @@
+.page {
+    background: #f8f9fa;
+    margin: 2em auto;
+    box-shadow: 0 0 0.5cm rgba(0, 0, 0, 0.5);
+    width: 21cm;
+    /*height: 29.7cm;*/
+    height: auto;
+    padding: 10px 5px 5px 5px;
+    overflow: hidden;
+}
+
+.page header {
+    height: 130px;
+    background: #fff;
+    box-shadow: 0 0 0.5cm rgba(0, 0, 0, 0.5);
+    border-left: solid 2px #84C547;
+    padding-left: 5px;
+    padding-bottom: 5px;
+    margin-top: 5px;
+}
+
+.page header .left-header{
+    float: left;
+    width: 75%;
+    height: 100%;
+    padding-top: 5px;
+}
+
+.page header .right-header{
+    float: left;
+    width: 25%;
+    height: 100%;
+    background: #84C547;
+    text-align: center;
+    padding-bottom: 5px;
+}
+
+.right-header img {
+    width: 90px;
+    height: 90px;
+    border-radius: 100%;
+}
+
+.right-header .rule{
+    font-size: 12px;
+    color: #fff;
+    margin-bottom: 5px;
+}
+
+.right-header .techno{
+    font-size: 11px;
+}
+
+.left-header .name{
+    margin-bottom: 5px;
+}
+
+.left-header .infos {
+    margin-top: 13px;
+}
+
+.left-header .info {
+    font-size: 11px;
+}
+
+.page section.main {
+    height: 900px;
+    margin-top: 1em;
+    padding-top: 0px;
+}
+
+.page section.main .main-left {
+    width: 25%;
+    /*height: 100%;*/
+    height: auto;
+    float: left;
+    background: #FFFFFF; /*#84C547*/
+    box-shadow: 0 0 0.5cm rgba(0, 0, 0, 0.5);
+}
+
+.main-left .formation {
+    padding-bottom: 3px;
+}
+
+.main-left .formation .formation-title {
+    background-color: #84C547;
+    padding: 7px 3px 3px 3px;
+    font-size: 13px;
+}
+
+.main-left .formation .events {
+    padding: 5px;
+}
+
+.main-left .formation .events .event {
+    font-size: 10px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+.main-left .event .date{
+    font-size: 12px;
+    font-weight: bold;
+    margin-bottom: 2px;
+}
+
+.main-left .event .title{
+    font-size: 11px;
+    color: #000000;
+}
+
+.page section.main .main-right {
+    width: 73.5%;
+    /*height: 100%;*/
+    height: auto;
+    float: left;
+    margin-left: 7px;
+    box-shadow: 0 0 0.5cm rgba(0, 0, 0, 0.5);
+}
+
+.main-right .title {
+    width: 99%;
+    padding: 7px 3px 3px 3px;
+    background-color: #84C547;
+    font-size: 13px;
+}
+
+.experiences {
+    padding-left: 5px;
+    padding-top: 15px;
+}
+.main-right .experiences .experience {
+    width: 97%;
+    /*height: auto;*/
+    /*padding-bottom: 3em;*/
+    /*display: block;*/
+    /*border-left: 2px solid #84C547;*/
+    /*height: 100px;*/
+    /*padding: 5px;*/
+}
+
+.experiences .clear {
+   margin-bottom: 1em;
+    height: 5px;
+}
+
+.experiences .experience .left-exp{
+    width: 7%;
+    /*height: 300px;*/
+    height: auto;
+    float: left;
+}
+
+.experiences .experience .right-exp{
+    width: 91.5%;
+    /*height: 300px;*/
+    height: auto;
+    float: left;
+    padding-left: 5px;
+}
+
+.left-exp img {
+    width: 40px;
+    height: 40px;
+}
+
+.right-exp .job {
+    font-size: 11px;
+    font-weight: bold;
+}
+
+.right-exp .type-company {
+    font-style: italic ;
+    font-size: 9px;
+}
+
+
+.right-exp .date-place {
+    color: #6c757d;
+    font-size: 8px;
+    font-style: italic ;
+}
+
+.right-exp .descriptions{
+    margin-top: 5px;
+    margin-bottom: 5px;
+    font-size: 11px;
+}
+
+.right-exp .descriptions .title-description{
+    font-size: 10px;
+    padding: 2px;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #212529;
+}
+.right-exp .descriptions .item{
+    padding: 2px;
+}
+
+.right-exp .descriptions .item i{
+    font-size: 7px;
+}
+
+.right-exp .technologies {
+    font-size: 11px;
+    font-weight: bold;
+    font-style: italic;
+    padding: 5px;
+    margin-bottom: 2em;
+    background-color: #84C547;
+}
+

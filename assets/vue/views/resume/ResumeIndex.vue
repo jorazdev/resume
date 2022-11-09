@@ -5,7 +5,7 @@
     <resume-profile :context="context"/>
     <section class="main">
       <div class="main-left">
-        <resume-formation :context="context"/>
+        <block-left :block-lefts="blockLefts"/>
       </div>
       <div class="main-right">
         <resume-experience :context="context"/>
@@ -18,12 +18,14 @@
 
 import ResumeHeader from "./components/ResumeHeader";
 import ResumeProfile from "./components/ResumeProfile";
-import ResumeFormation from "./components/ResumeFormation";
+import BlockLeft from "./components/BlockLeft";
 import ResumeExperience from "./components/ResumeExperience";
 import ResumePanel from "./components/ResumePanel";
 import useCv from "../../composables/cv";
+import useBlockLeft from "../../composables/blockLeft";
 
 const { context } = useCv()
+const { blockLefts } = useBlockLeft()
 
 </script>
 

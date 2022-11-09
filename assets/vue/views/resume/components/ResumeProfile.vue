@@ -1,12 +1,8 @@
 <template>
   <section class="profile">
     <section class="information">
-      <div class="name">
-        {{ context.header.name }} {{ context.header.lastName }}
-      </div>
-      <div class="techno">
-        {{ context.header.rule }} {{ context.header.techno }}
-      </div>
+      <div class="name">{{ context.header.name }} {{ context.header.lastName }}</div>
+      <div class="techno">{{ context.header.rule }} {{ context.header.techno }}</div>
     </section>
     <section class="contacts">
       <div class="contact"

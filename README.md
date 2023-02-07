@@ -8,4 +8,4 @@
 
 ## Description
 
-Une application web de gestion de CV dynamique fait avec Symfony 6 et Vuejs 3
+Une application web de gestion de CV dynamique fait avec Symfony 6 et Vuejs 3 composition API

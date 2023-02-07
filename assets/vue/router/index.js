@@ -7,7 +7,7 @@ const routes = [
         component: () => import('../views/resume/ResumeIndex.vue')
     },
     {
-        path: '/about',
+        path: '/about/:token',
         name: 'about',
         component: () => import('../views/about/AboutIndex.vue')
     },
